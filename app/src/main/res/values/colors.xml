@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+
+    <!-- FitLife brand colors -->
+    <color name="fitlife_green_primary">#2D4F3A</color>
+    <color name="fitlife_green_light">#3E6F55</color>
+    <color name="fitlife_green_pressed">#254434</color>
+    <color name="white">#FFFFFF</color>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_fitlife_launcher"
+        android:label="FitLife"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FitLife">
+
+        <!-- DASHBOARD ACTIVITY -->
+        <activity android:name=".ui.dashboard.DashboardActivity" />
+
+        <!-- ROUTINES ACTIVITY -->
+        <activity android:name=".ui.routines.RoutineListActivity" />
+        <activity android:name=".ui.routines.AddRoutineActivity" />
+        <activity android:name=".ui.routines.RoutineDetailActivity" />
+
+        <!-- TRASH ACTIVITY -->
+        <activity android:name=".ui.routines.TrashActivity" />
+
+        <!-- GLOBAL CHECKLIST ACTIVITY -->
+        <activity android:name=".ui.checklist.GlobalChecklistActivity" />
+
+        <!-- DELEGATION MODULE (Friends + Requests + Chats) -->
+        <activity android:name=".ui.delegation.DelegationHomeActivity" />
+        <activity android:name=".ui.delegation.FindUsersActivity" />
+        <activity android:name=".ui.delegation.FriendRequestsActivity" />
+        <activity android:name=".ui.delegation.FriendsListActivity" />
+        <activity android:name=".ui.delegation.ChatsListActivity" />
+        <activity android:name=".ui.delegation.ChatActivity" />
+
+        <!-- SIGNUP ACTIVITY -->
+        <activity
+            android:name=".ui.auth.SignupActivity"
+            android:exported="false" />
+
+        <!-- LOGIN ACTIVITY -->
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="false" />
+
+        <!--EXERCISE ACTIVITY -->
+        <activity android:name=".ui.exercises.ExerciseListActivity" />
+        <activity android:name=".ui.exercises.AddEditExerciseActivity" />
+
+
+
+        <!-- MAIN (HOME) ACTIVITY -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+    </application>
+
+</manifest>

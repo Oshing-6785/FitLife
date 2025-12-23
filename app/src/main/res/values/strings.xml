@@ -1,0 +1,68 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- App Info -->
+    <string name="app_name">FitLife</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Template strings  -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet... (keep this long text)
+    </string>
+
+    <!-- Home / Landing Screen -->
+    <string name="home_title">FitLife</string>
+    <string name="home_subtitle">Plan your workouts and equipment easily.</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_signup">Sign Up</string>
+    <string name="app_logo_desc">App Logo</string>
+
+    <!-- Login -->
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+
+    <!-- Signup -->
+    <string name="signup_title">Create Account</string>
+    <string name="signup_name_hint">Full name</string>
+    <string name="signup_email_hint">Email</string>
+    <string name="signup_password_hint">Password</string>
+    <string name="signup_confirm_password_hint">Confirm password</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_welcome_placeholder">Welcome</string>
+    <string name="dashboard_my_routines">My Routines</string>
+    <string name="dashboard_global_checklist">Global Checklist</string>
+    <string name="dashboard_delegation_sms">Delegation (SMS)</string>
+    <string name="dashboard_logout">Logout</string>
+    <string name="welcome_user">Welcome, %1$s</string>
+    <string name="dashboard_trash">Trash</string>
+
+
+    <!-- Routine List -->
+    <string name="routine_list_title">My Routines</string>
+    <string name="routine_list_add_btn">Add Routine</string>
+    <string name="routine_list_empty">No routines yet. Tap “Add Routine” to create one.</string>
+
+    <!-- hint for soft delete + shake restore -->
+    <string name="routine_list_hint">Tap to edit • Swipe right = done/undone • Swipe left = move to Trash • Shake = restore last deleted</string>
+
+    <!-- (Optional for future Trash UI) -->
+    <string name="trash_title">Trash</string>
+    <string name="trash_empty">Trash is empty.</string>
+
+    <!-- Add Routine  -->
+    <string name="add_routine_title">Create New Routine</string>
+    <string name="add_routine_name_hint">Routine name (e.g., Push Day)</string>
+    <string name="add_routine_goal_label">Goal</string>
+    <string name="add_routine_day_label">Day of week</string>
+    <string name="add_routine_time_label">Workout time</string>
+    <string name="add_routine_time_hint">Tap to select time</string>
+    <string name="add_routine_notes_label">Notes</string>
+    <string name="add_routine_notes_hint">Special instructions, equipment, goals...</string>
+    <string name="add_routine_save_btn">Save Routine</string>
+
+</resources>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp">
+
+        <!-- Header Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardRoutineHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#E6E6E6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgRoutineHeader"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:src="@drawable/ic_routine"
+                    android:contentDescription="Routine icon"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Circle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/tvAddRoutineTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_routine_title"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@id/imgRoutineHeader"
+                    app:layout_constraintTop_toTopOf="@id/imgRoutineHeader"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvAddRoutineSub"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Set your goal, day, and time. Keep notes short."
+                    android:textSize="13sp"
+                    android:textColor="#666666"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintStart_toStartOf="@id/tvAddRoutineTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tvAddRoutineTitle"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Routine Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilRoutineName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:startIconDrawable="@android:drawable/ic_menu_edit"
+            app:hintEnabled="true"
+            app:helperText="Required"
+            app:layout_constraintTop_toBottomOf="@id/cardRoutineHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/etRoutineName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/add_routine_name_hint"
+                android:inputType="textPersonName"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Goal label -->
+        <TextView
+            android:id="@+id/tvGoalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_routine_goal_label"
+            android:textColor="@color/black"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@id/tilRoutineName"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Goal Spinner -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardGoal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#DDDDDD"
+            app:layout_constraintTop_toBottomOf="@id/tvGoalLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Spinner
+                android:id="@+id/spinnerGoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Day label -->
+        <TextView
+            android:id="@+id/tvDayLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_routine_day_label"
+            android:textColor="@color/black"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@id/cardGoal"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Days chips -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupDays"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:singleLine="false"
+            app:layout_constraintTop_toBottomOf="@id/tvDayLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Time label -->
+        <TextView
+            android:id="@+id/tvTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_routine_time_label"
+            android:textColor="@color/black"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@id/chipGroupDays"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Time -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:endIconMode="custom"
+            app:endIconDrawable="@android:drawable/ic_menu_recent_history"
+            app:helperText="Tap anywhere to pick time"
+            app:layout_constraintTop_toBottomOf="@id/tvTimeLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvSelectedTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="@string/add_routine_time_hint"
+                android:textColor="#444444" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Notes -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNotes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:helperText="Optional (max 250 chars)"
+            app:layout_constraintTop_toBottomOf="@id/tilTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/add_routine_notes_hint"
+                android:minLines="3"
+                android:gravity="top|start"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Manage Exercises -->
+        <Button
+            android:id="@+id/btnManageExercises"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Manage Exercises"
+            android:textColor="@color/white"
+            android:background="@drawable/button_fitlife"
+            android:backgroundTint="@null"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tilNotes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Save -->
+        <Button
+            android:id="@+id/btnSaveRoutine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/add_routine_save_btn"
+            android:textColor="@color/white"
+            android:background="@drawable/button_fitlife"
+            android:backgroundTint="@null"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="18dp"
+            app:layout_constraintTop_toBottomOf="@id/btnManageExercises"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,32 @@
+# ===== Android / Gradle =====
+*.iml
+.gradle/
+build/
+local.properties
+.idea/
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/deploymentTargetSelector.xml
+.idea/runConfigurations/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# APK / AAB
+*.apk
+*.aab
+
+# Keystore
+*.jks
+*.keystore
+
+# Firebase
+google-services.json

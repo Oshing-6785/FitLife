@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardRoutineRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true"
+    app:strokeWidth="1dp"
+    app:strokeColor="#E6E6E6"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivRoutineIcon"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:contentDescription="Routine icon"
+            android:src="@drawable/ic_routine"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRoutineName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Push Day"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/ivRoutineIcon"
+            app:layout_constraintEnd_toStartOf="@id/tvDoneBadge"
+            app:layout_constraintTop_toTopOf="@id/ivRoutineIcon" />
+
+        <TextView
+            android:id="@+id/tvDoneBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DONE"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:textColor="#1B5E20"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:background="@drawable/bg_done_badge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRoutineSchedule"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Mon @ 07:30"
+            android:textSize="13sp"
+            android:textColor="#444444"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/ivRoutineIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRoutineName" />
+
+        <TextView
+            android:id="@+id/tvRoutineGoal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Goal: Strength"
+            android:textSize="13sp"
+            android:textColor="#444444"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/ivRoutineIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRoutineSchedule" />
+
+        <TextView
+            android:id="@+id/tvRoutineNotes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Notes: Keep rest 60 sec. Focus form."
+            android:textSize="13sp"
+            android:textColor="#555555"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="12dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/ivRoutineIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRoutineGoal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
