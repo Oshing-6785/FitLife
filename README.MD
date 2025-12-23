@@ -138,5 +138,5 @@ Helpers that are feature-specific (e.g. gesture detectors) are intentionally pla
 ---
 
 ## Ownership
-This project is intended for **commercial, internal, or client delivery use**.  
+This project is intended for **internal use**.  
 Architecture and structure are designed for maintainability and scalability.
